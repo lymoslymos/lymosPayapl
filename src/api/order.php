@@ -31,10 +31,8 @@ class Order{
             'Content-Type: application/json',
             'Authorization: Bearer ' . $access_token
         ];
-        error_log(print_r($options, true) . "\r\n", 3, '/mnt/d/www/debug.log');
 
         $ret = $requ->post($url, $data, $options);
-        echo $ret;
         return $ret;
     }
 
